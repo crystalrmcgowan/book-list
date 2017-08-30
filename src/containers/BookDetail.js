@@ -2,7 +2,7 @@ import React, { Component } from "react"
 import { connect } from "react-redux"
 import { selectBook } from "../actions/index"
 //make sure action created flows through all reducers
-import { bindActionCreators } from "redux"
+// import { bindActionCreators } from "redux"
 
 class BookDetail extends Component {
   render() {
@@ -25,11 +25,11 @@ class BookDetail extends Component {
           Price: ${this.props.book.price} USD
         </div>
         <div>
-          Published: {this.props.book.published_date} by{" "}
+          Published: {this.props.book.published_date} by
           {this.props.book.publisher}
         </div>
         <div>
-          Genre: {this.props.book.category.join(", ")}{" "}
+          Genre: {this.props.book.category.join(", ")}
         </div>
       </div>
     )

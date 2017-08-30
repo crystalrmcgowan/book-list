@@ -1,5 +1,6 @@
 import { combineReducers } from "redux"
-
+import * as ActionTypes from "../actionTypes/actions"
+//
 import bookList from "../data/books"
 
 const initialState = bookList
@@ -11,7 +12,7 @@ console.log(initialState)
 //b/c redux does not allow to return undefined
 const ActiveBook = (state = null, action) => {
   switch (action.type) {
-    case "BOOK_SELECTED":
+    case ActionTypes.SELECT_BOOK:
       return action.payload
   }
   return state
